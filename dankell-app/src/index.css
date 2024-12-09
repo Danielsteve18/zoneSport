@@ -1,0 +1,115 @@
+/* Estilos globales para toda la aplicación */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo y diseño general */
+body {
+  background-color: #a6dafdb9; /* Color de fondo suave */
+  color: #333; /* Color de texto */
+  line-height: 1.6;
+  padding: 20px;
+  font-size: 16px;
+}
+
+/* Diseño de la cabecera */
+h1 {
+  font-size: 2.5rem;
+  color: #3a3a3a;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Contenedor principal de la galería de cómics */
+.comic-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Diseño flexible */
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+
+/* Estilo de las tarjetas de cómic */
+.comic-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  overflow: hidden;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+  text-align: center;
+  cursor: pointer;
+}
+
+.comic-card:hover {
+  transform: translateY(-5px); /* Elevación en hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra más prominente */
+}
+
+/* Imagen dentro de las tarjetas */
+.comic-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: opacity 0.3s ease; /* Transición suave en la opacidad */
+}
+
+.comic-card:hover .comic-image {
+  opacity: 0.9; /* Cambio de opacidad en hover */
+}
+
+/* Título dentro de las tarjetas */
+h2 {
+  padding: 10px;
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 500;
+  text-transform: capitalize; /* Capitaliza la primera letra de cada palabra */
+}
+
+/* Estilo del botón */
+button {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  background-color: #4caf50; /* Verde atractivo */
+  color: #53f023c0;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Responsive design para pantallas más pequeñas */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
