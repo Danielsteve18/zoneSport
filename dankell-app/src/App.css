@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.descripcion{
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  padding: 2%;
+  background-color: #e9ecef;
+  height: 100%;
+}
